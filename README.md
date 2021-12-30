@@ -10,9 +10,9 @@ Vue JS 3 Tutorial for Beginners
 - [x] #3 Vue.js Basics (part2)
 - [x] #4 The Vue CLI & Bigger Projects (part 1)
 - [x] #5 The Vue CLI & Bigger Projects (part 2)
-- [ ] #6 Build a Reaction Timer Game - next
-- [ ] #7 Form & Inputs
-- [ ] #8 The Vue Router
+- [x] #6 Build a Reaction Timer Game
+- [x] #7 Form & Inputs
+- [ ] #8 The Vue Router - next
 - [ ] #9 Fetching Data
 - [ ] #10 The Composistion API (part 1)
 - [ ] #11 The Composistion API (part 2)
