@@ -1,24 +1,47 @@
 <template>
 
-    <form action="">
+    <div>
+        <form action="">
         
-        <label>Email</label>
-        <input type="email" required v-model="email">
+            <label>Email</label>
+            <input type="email" required v-model="email">
 
-        <label>Password</label>
-        <input type="password" required v-model="password">
+            <label>Password</label>
+            <input type="password" required v-model="password">
 
-        <label>Role:</label>
-        <select v-model="role">
-            <option value="developer">Web Developer</option>
-            <option value="designer">Web Designer</option>
-        </select>
+            <label>Role:</label>
+            <select v-model="role">
+                <option value="developer">Web Developer</option>
+                <option value="designer">Web Designer</option>
+            </select>
 
-    </form>
+            <div class="terms">
+                <input type="checkbox" v-model="terms" required>
+                <label>Accept terms and conditions</label>
+            </div>
 
-    <p>Email : {{ email }}</p>
-    <p>Password : {{ password }}</p>
-    <p>Role : {{ role }}</p>
+            <!-- <div>
+                <input type="checkbox" value="janzen" v-model="names">
+                <label>Janzen</label>
+            </div>
+            <div>
+                <input type="checkbox" value="hugo" v-model="names">
+                <label>Hugo</label>
+            </div>
+            <div>
+                <input type="checkbox" value="wicky" v-model="names">
+                <label>Wicky</label>
+            </div> -->
+
+        </form>
+
+        <p>Email : {{ email }}</p>
+        <p>Password : {{ password }}</p>
+        <p>Role : {{ role }}</p>
+        <p>Terms accepted : {{ terms }}</p>
+        <!-- <p>Names : {{ names }}</p> -->
+
+    </div>
 
 </template>
 
@@ -28,7 +51,9 @@ export default {
         return {
             email: '',
             password: '',
-            role: ''
+            role: '',
+            terms: false, // for single checkbox
+            // names: [], // for multiple checkbox
         }
     }
 }
@@ -54,10 +79,18 @@ export default {
     input, select {
         display: block;
         padding: 10px 6px;
+        margin-bottom: 10px;
         width: 100%;
         box-sizing: border-box;
         border: none;
         border-bottom: 1px solid #ddd;
         color: #555;
+    }
+    input[type="checkbox"] {
+        display: inline-block;
+        width: 16px;
+        margin: 0 10px 0 0;
+        position: relative;
+        top: 2px;
     }
 </style>
